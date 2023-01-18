@@ -9,20 +9,18 @@ import Portfolio from './components/portfolio/Portfolio';
 import Services from './components/services/Services';
 import Testimonials from './components/testimonials/Testimonials';
 
-const App = () => {
-  return (
-    <div>
-      <Header />
-      <Nav />
-      <About />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
-  )
-};
+const App = () => (
+  <div>
+    <Header />
+    <Nav />
+    <About />
+    <Experience />
+    <Services />
+    <Portfolio />
+    <Testimonials />
+    <Contact />
+    <Footer />
+  </div>
+);
 
 export default App;

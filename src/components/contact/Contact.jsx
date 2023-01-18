@@ -1,11 +1,10 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './contact.css';
-import {MdOutlineMail} from 'react-icons/md';
-import {RiMessengerLine} from 'react-icons/ri';
+import { MdOutlineMail } from 'react-icons/md';
+import { RiMessengerLine } from 'react-icons/ri';
 
 const Contact = () => {
-
   const form = useRef();
   console.log(form);
 
@@ -14,9 +13,9 @@ const Contact = () => {
 
     emailjs.sendForm('service_wb47sxq', 'template_0itttz7', form.current, 'P_53m0Y8QtaGYykOt')
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
     e.target.reset();
   };
@@ -29,14 +28,14 @@ const Contact = () => {
       <div className="container contact__container">
         <div className="contact__options">
           <article className="contact__option">
-            <MdOutlineMail className="contact__option-icon"/>
+            <MdOutlineMail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>gaks4s92@gmail.com</h5>
             <a href="mailto:gaks4s92@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
           </article>
 
           <article className="contact__option">
-            <RiMessengerLine className="contact__option-icon"/>
+            <RiMessengerLine className="contact__option-icon" />
             <h4>Messenger</h4>
             <h5>Ghazanfar Ali</h5>
             <a href="https://m.me/ghazanfar.ali.31105" target="_blank" rel="noreferrer">Send a message</a>
@@ -46,13 +45,13 @@ const Contact = () => {
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="name" placeholder="Your Full Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+          <textarea name="message" rows="7" placeholder="Your Message" required />
           <button type="submit" className="btn btn-primary">Send Message</button>
         </form>
       </div>
 
     </section>
-  )
+  );
 };
 
 export default Contact;
